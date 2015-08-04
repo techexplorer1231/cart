@@ -49,10 +49,11 @@ module.exports = function(config) {
       'karma-angular-filesort',
       'karma-jasmine',
       'karma-coverage',
+      'karma-coveralls',
       'karma-ng-html2js-preprocessor'
     ],
 
-    reporters: ['progress', 'coverage'],
+    reporters: ['coverage', 'coveralls'],
 
     preprocessors: {
       'src/**/*.html': ['ng-html2js'],
