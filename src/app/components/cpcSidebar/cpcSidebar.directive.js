@@ -38,7 +38,7 @@
       }
 
       vm.close = function() {
-        $log.debug('activate sidebar');
+        logger.debug('activate sidebar');
         $mdSidenav('left').close()
           .then(function () {
             logger.info('close LEFT is done');
