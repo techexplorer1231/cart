@@ -37,6 +37,8 @@ module.exports = function(config) {
       whitelist: [path.join(conf.paths.src, '/**/!(*.html|*.spec|*.mock).js')]
     },
 
+    reporters: ['coverage'],
+
     ngHtml2JsPreprocessor: {
       stripPrefix: 'src/',
       moduleName: 'cart'
@@ -53,15 +55,13 @@ module.exports = function(config) {
       'karma-ng-html2js-preprocessor'
     ],
 
-    reporters: ['coverage', 'coveralls'],
-
     preprocessors: {
       'src/**/*.html': ['ng-html2js'],
       'src/**/*.js': ['coverage']
     },
 
     coverageReporter: {
-      type: 'lcov',
+      type : 'lcov',
       dir: 'coverage'
     },
   };
