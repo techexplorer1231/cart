@@ -1,0 +1,29 @@
+language: node_js
+sudo: false
+node_js:
+  - '0.10'
+  - '0.11'
+  - '0.12'
+  - iojs
+
+cache:
+  directories:
+    - node_modules
+    - bower_components
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: iojs
+
+before_script:
+  - gem install sass
+  - npm install -g bower
+  - npm install -g gulp
+  - bower install
+
+script:
+  - gulp test
+
+after_success:
+  - gulp coverage
