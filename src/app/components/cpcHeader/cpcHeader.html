@@ -17,10 +17,19 @@
         <!--<i class="fa fa-heart fa-lg"></i>-->
         <md-icon md-svg-icon="not-favorite" class="avatar"></md-icon>
       </md-button>
-      <md-button class="md-icon-button" aria-label="More">
-        <!--<i class="fa fa-ellipsis-v fa-lg"></i>-->
-        <md-icon md-svg-icon="vertical-menu" class="avatar"></md-icon>
-      </md-button>
+      <md-menu>
+        <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="$mdOpenMenu()">
+          <md-icon md-menu-origin="" md-svg-icon="vertical-menu"></md-icon>
+        </md-button>
+        <md-menu-content width="4">
+          <md-menu-item>
+            <md-button ng-click="vm.redial($event)">
+              <md-icon md-svg-icon="favorite" md-menu-align-target=""></md-icon>
+              Redial
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
     </div>
   </md-toolbar>
 </md-content>

@@ -20,6 +20,7 @@
     /** @ngInject */
     function HeaderController($mdSidenav, $mdUtil, logger) {
       var vm = this;
+      vm.notificationsEnabled = true;
       vm.toggleLeft = buildToggler('left');
 
       /**
@@ -37,6 +38,10 @@
 
         return debounceFn;
       }
+
+      vm.redial = function(e) {
+        alert('Hello');
+      };
 
     }
   }
